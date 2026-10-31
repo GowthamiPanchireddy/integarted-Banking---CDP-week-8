@@ -1,0 +1,32 @@
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache and test cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs and logs
+output/
+*.log
+
+# IDE and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Include sanitized Customer 360 output
+!output/
+output/*
+!output/customer_360.csv

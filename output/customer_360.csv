@@ -1,0 +1,11 @@
+customer_id,customer_name,account_count,transaction_count,total_transaction_amount,last_transaction_date
+C001,Arjun Kumar,2,2,625.5,2026-09-06
+C002,Priya Sharma,2,2,1000.0,2026-09-06
+C003,Rahul Reddy,1,0,0.0,
+C004,Ananya Rao,2,2,1075.0,2026-09-06
+C005,Vikram Singh,2,2,240.0,2026-09-06
+C006,Meera Patel,2,1,300.0,2026-09-06
+C007,Kiran Kumar,2,0,0.0,
+C008,Sneha Reddy,2,1,225.0,2026-09-06
+C009,Aditya Rao,2,2,410.0,2026-09-06
+C010,Divya Sharma,4,1,25.0,2026-09-06

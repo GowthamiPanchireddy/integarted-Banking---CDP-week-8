@@ -1,0 +1,5 @@
+record_id,record_type,customer_id,account_id,amount,transaction_date,transaction_type
+T1001,TRANSACTION,,A1001,500.0,2026-09-06,CREDIT
+T9999,TRANSACTION,,A9999,250.0,2026-09-06,DEBIT
+A9998,ACCOUNT,C9999,,,,
+T9998,TRANSACTION,,A1001,75.0,,DEBIT
