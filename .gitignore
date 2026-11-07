@@ -30,3 +30,13 @@ Thumbs.db
 !output/
 output/*
 !output/customer_360.csv
+
+# Week 9 dbt generated files
+*.duckdb
+target/
+logs/
+dbt_packages/
+profiles.yml
+
+# Local dbt user metadata
+.user.yml

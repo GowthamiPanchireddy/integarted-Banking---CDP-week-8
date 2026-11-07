@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_accounts
+    description: "Account dimension containing account details and related customer information."
+    columns:
+      - name: account_id
+        description: "Unique identifier for each account."
+      - name: customer_id
+        description: "Identifier of the customer who owns the account."
+      - name: customer_name
+        description: "Name of the account holder."
+      - name: account_type
+        description: "Type of bank account."
+      - name: account_status
+        description: "Current status of the account."
+
+  - name: fct_daily_account_activity
+    description: "Daily transaction summary for each bank account."
+    columns:
+      - name: transaction_date
+        description: "Date on which transactions occurred."
+      - name: account_id
+        description: "Identifier of the account."
+      - name: transaction_count
+        description: "Total number of transactions for the account on that date."
+      - name: total_deposits
+        description: "Total amount deposited."
+      - name: total_outflows
+        description: "Total amount spent or withdrawn."
+      - name: net_amount
+        description: "Deposits minus purchases and withdrawals."

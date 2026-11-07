@@ -1,0 +1,42 @@
+
+name: Week 9 dbt CI
+
+on:
+  push:
+    paths:
+      - 'week_09_dbt_project/**'
+      - '.github/workflows/week9_dbt_ci.yml'
+
+  pull_request:
+    paths:
+      - 'week_09_dbt_project/**'
+      - '.github/workflows/week9_dbt_ci.yml'
+
+  workflow_dispatch:
+
+jobs:
+  dbt-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: week_09_dbt_project
+
+      - name: Configure dbt profile
+        run: cp profiles.yml.example profiles.yml
+        working-directory: week_09_dbt_project
+
+      - name: Run dbt build
+        run: dbt build --profiles-dir .
+        working-directory: week_09_dbt_project
